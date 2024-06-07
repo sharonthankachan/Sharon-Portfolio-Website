@@ -46,7 +46,8 @@ const Projects = ({id}) => {
               title="Personal Portfolio"
               description="Designed and developed a responsive personal portfolio website showcasing projects, skills, and contact details."
               image={portfolio}
-              liveLink="/"
+              liveLink="https://sharonthankachan.vercel.app/"
+              gitHubLink="https://github.com/sharonthankachan/Sharon-Portfolio-Website"
             />
           </div>
           <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">

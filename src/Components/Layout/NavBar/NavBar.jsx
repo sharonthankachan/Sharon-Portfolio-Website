@@ -37,11 +37,11 @@ function NavBar() {
   }, []);
 
   return (
-    <header className="fixed w-full top-0 z-50 transition-all duration-500">
+    <header className="fixed w-full top-0 z-50">
       <nav
         className={`bg-white ${
           scrolling ? "md:bg-white" : "md:bg-transparent"
-        } lg:h-20 h-12 sm:h-16 transition-all duration-700 py-2 md:px-8 px-4 flex justify-between items-center`}
+        } lg:h-20 h-12 sm:h-16  py-2 md:px-8 px-4 flex justify-between items-center`}
       >
         <Link
           className="md:text-2xl text-lg font-bold tracking-widest text-neutralDGrey cursor-pointer"

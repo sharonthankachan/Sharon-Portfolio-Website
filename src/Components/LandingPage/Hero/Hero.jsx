@@ -123,19 +123,8 @@ const Hero = ({ id }) => {
                   <TbBrandGithubFilled />
                 </div>
               </a>
-              {/* <a
-                href=""
-                target="_blank"
-                data-aos="fade-left"
-                data-aos-delay="2300"
-                data-aos-duration="900"
-              >
-                <div className="text-greenPrimary bg-white border border-1 border-greenPrimary p-2 text-lg rounded-full">
-                  <IoLogoInstagram />
-                </div>
-              </a> */}
               <a
-                href="mailto : sharonthankachan171@gmail.com"
+                href="mailto: sharonthankachan171@gmail.com"
                 target="_blank"
                 data-aos="fade-left"
                 data-aos-delay="2300"
@@ -148,20 +137,13 @@ const Hero = ({ id }) => {
             </div>
           </div>
         </div>
-        {/* <div
-          className="order-1 w-7/12 sm:w-5/12 mb-6 md:order-2 bg-blue-gray-100 rounded-full  overflow-hidden md:mt-16 mt-14"
-          data-aos="fade"
-          data-aos-delay="300"
-          data-aos-duration="1500"
-        > */}
-        {/* <img src={banner_img} alt="Banner Image" /> */}
+
         <div
           data-aos="fade"
           data-aos-delay="900"
           data-aos-duration="1500"
           className="home_img mt-10 md:mt-0 min-w-[18.75rem]"
         ></div>
-        {/* </div> */}
       </div>
     </section>
   );
