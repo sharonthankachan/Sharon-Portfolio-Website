@@ -10,17 +10,19 @@ import map from "../../../assets/map.svg";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
+import { Spinner } from "@material-tailwind/react";
 
 const ContactMe = ({ id }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
+setLoading(true)
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -32,6 +34,7 @@ const ContactMe = ({ id }) => {
       )
       .then(
         () => {
+          setLoading(false)
           console.log("SUCCESS!");
           setOpen(true);
           setName("");
@@ -39,6 +42,7 @@ const ContactMe = ({ id }) => {
           setMessage("");
         },
         (error) => {
+          setLoading(false)
           console.log("FAILED...", error.text);
         }
       );
@@ -161,6 +165,7 @@ const ContactMe = ({ id }) => {
                     <Input
                       color="gray"
                       size="lg"
+                      required
                       label="Name"
                       type="text"
                       value={name}
@@ -177,6 +182,7 @@ const ContactMe = ({ id }) => {
                     <Input
                       color="gray"
                       size="lg"
+                      required
                       value={email}
                       type="email"
                       onChange={(e) => setEmail(e.target.value)}
@@ -191,6 +197,7 @@ const ContactMe = ({ id }) => {
                   <div>
                     <Textarea
                       rows={6}
+                      required
                       color="gray"
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -206,8 +213,8 @@ const ContactMe = ({ id }) => {
                     type="submit"
                     className="px-3 flex hover:cursor-pointer md:w-6/12 justify-center items-center py-3 md:text-sm text-sm bg-greenPrimary hover:bg-green-400 border transition duration-150 text-white rounded-lg"
                   >
-                    Send Message
-                    <FiSend className="ml-4" />
+                    {loading? "Sending" : "Send Message"}
+                    {loading ? <Spinner className="h-4 w-4 ml-4" color="white" /> :<FiSend className="ml-4" />}
                   </button>
                 </div>
               </div>
