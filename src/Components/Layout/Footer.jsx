@@ -22,7 +22,7 @@ const Footer = () => {
         >
           sharon<span className="text-greenPrimary">_</span>
         </Link>
-        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
+        <ul className="flex flex-wrap items-center justify-center gap-y-2 gap-x-8">
           {footerNavItems.map((item, index) => (
             <li key={index}>
               <Typography

@@ -1,10 +1,5 @@
 import React from "react";
 import ProjectCard from "../Projects/ProjectCard";
-import { FaReact } from "react-icons/fa";
-import { CiShoppingTag } from "react-icons/ci";
-import { BsFeather } from "react-icons/bs";
-import { LuCode2 } from "react-icons/lu";
-import sample from "../../assets/banner_image.png";
 import cookify from "../../assets/cookify.png";
 import ai_image_generator from "../../assets/ai_image_generator.png";
 import netflix_clone from "../../assets/netflix-clone.png";
@@ -61,7 +56,7 @@ const Projects = ({id}) => {
           </div>
           <div
             data-aos="fade-up"
-            // data-aos-delay="1000"
+            data-aos-delay="1000"
             data-aos-duration="1000"
           >
             <ProjectCard
