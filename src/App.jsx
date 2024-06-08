@@ -43,7 +43,7 @@ function App() {
         <Footer />
         {showScroll && (
           <Link
-            className="z-50 fixed bottom-10 cursor-pointer right-5 bg-gray-700 bg-opacity-60 hover:bg-opacity-100 rounded-full transition duration-300 text-white text-4xl"
+            className="z-40 fixed bottom-10 cursor-pointer right-5 bg-gray-700 bg-opacity-60 hover:bg-opacity-100 rounded-full transition duration-300 text-white text-4xl"
             to="hero"
             smooth={true}
             duration={800}
@@ -51,7 +51,7 @@ function App() {
             data-aos="fade-in"
             data-aos-duration="700"
           >
-            <MdKeyboardArrowUp/>
+            <MdKeyboardArrowUp />
           </Link>
         )}
       </AOSWrapper>

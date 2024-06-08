@@ -1,7 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
 
-
 const frontEnd = [
   { name: "HTML", level: "Advanced" },
   { name: "CSS", level: "Intermediate" },
@@ -20,15 +19,24 @@ const backEnd = [
   { name: "Express", level: "Basic" },
 ];
 
-const Skills = ({id}) => {
+const Skills = ({ id }) => {
   return (
-    <section className="" id={id}>
-      <div className="lg:mx-20 md:mx-12 mx-6 pt-8">
+    <section className="overflow-hidden" id={id}>
+      <div className="">
         <div className="">
-          <h1 className="text-neutralGrey md:text-xl mt-12 font-bold text-center" data-aos="fade-right" data-aos-duration="900">
+          <h1
+            className="text-neutralGrey md:text-xl mt-12 font-bold text-center"
+            data-aos="fade-right"
+            data-aos-duration="900"
+          >
             Explore My
           </h1>
-          <h1 className=" mt-8 md:text-5xl text-greenPrimary text-3xl font-bold text-center" data-aos="fade-right" data-aos-duration="900" data-aos-delay="400">
+          <h1
+            className=" mt-8 md:text-5xl text-greenPrimary text-3xl font-bold text-center"
+            data-aos="fade-right"
+            data-aos-duration="900"
+            data-aos-delay="400"
+          >
             Skills
           </h1>
         </div>
@@ -40,7 +48,7 @@ const Skills = ({id}) => {
           data-aos-duration="1500"
           data-aos-delay="800"
         >
-          <SkillCard domain={"Front End"} contents = {frontEnd} />
+          <SkillCard domain={"Front End"} contents={frontEnd} />
         </div>
         <div
           className=""
@@ -48,7 +56,7 @@ const Skills = ({id}) => {
           data-aos-duration="1500"
           data-aos-delay="800"
         >
-          <SkillCard domain={"Back End"} contents = {backEnd} />
+          <SkillCard domain={"Back End"} contents={backEnd} />
         </div>
       </div>
     </section>

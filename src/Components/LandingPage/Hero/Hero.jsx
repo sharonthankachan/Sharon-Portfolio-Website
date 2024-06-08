@@ -16,7 +16,7 @@ const Hero = ({ id }) => {
   const handleType = () => {};
 
   return (
-    <section className="" id={id}>
+    <section className="overflow-hidden" id={id}>
       <div className=" md:mx-10 pl-1 flex xl:gap-24 md:gap-12 flex-col md:flex-row items-center pt-12 md:pt-16 pb-12 justify-center">
         <div className="sm:mx-6 max-w-[35rem] pb-9 md:order-1 order-2 md:mt-24 mt-4 mx-4 md:mx-0 lg:mx-0">
           <h1
@@ -72,7 +72,7 @@ const Hero = ({ id }) => {
               data-aos-duration="900"
             >
               <a
-                className="px-6 flex justify-center hover:cursor-pointer w-auto items-center py-4 md:text-sm text-xs bg-greenPrimary hover:bg-[#285a2a] hover:text-white border border-greenPrimary hover:border-green-900 transition duration-500 text-white rounded mt-6"
+                className="md:px-4 lg:px-6 px-6 flex justify-center hover:cursor-pointer w-auto items-center py-4 md:text-sm text-xs bg-greenPrimary hover:bg-[#285a2a] hover:text-white border border-greenPrimary hover:border-green-900 transition duration-500 text-white rounded mt-6"
                 name="Download CV"
                 download="Sharon's CV"
                 href={cv}
@@ -87,7 +87,7 @@ const Hero = ({ id }) => {
               data-aos-duration="900"
             >
               <Link
-                className="px-6 flex justify-center hover:cursor-pointer w-auto items-center py-4 md:text-sm text-xs bg-white hover:bg-neutralDGrey hover:text-white border border-neutralDGrey transition duration-500 text-neutralDGrey rounded mt-6"
+                className="md:px-4 lg:px-6 px-6 flex justify-center hover:cursor-pointer w-auto items-center py-4 md:text-sm text-xs bg-white hover:bg-neutralDGrey hover:text-white border border-neutralDGrey transition duration-500 text-neutralDGrey rounded mt-6"
                 to="contact-me"
                 smooth={true}
                 duration={800}

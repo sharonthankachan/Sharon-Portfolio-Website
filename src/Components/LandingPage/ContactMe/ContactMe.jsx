@@ -6,7 +6,6 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import map from "../../../assets/map.svg";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Slide from "@mui/material/Slide";
@@ -17,12 +16,12 @@ const ContactMe = ({ id }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-setLoading(true)
+    setLoading(true);
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -34,7 +33,7 @@ setLoading(true)
       )
       .then(
         () => {
-          setLoading(false)
+          setLoading(false);
           console.log("SUCCESS!");
           setOpen(true);
           setName("");
@@ -42,7 +41,7 @@ setLoading(true)
           setMessage("");
         },
         (error) => {
-          setLoading(false)
+          setLoading(false);
           console.log("FAILED...", error.text);
         }
       );
@@ -61,7 +60,7 @@ setLoading(true)
   };
 
   return (
-    <section id={id} className="pt-6">
+    <section id={id} className="pt-6 overflow-hidden">
       <div className="px-8 py-8 lg:py-16 flex justify-center">
         <Snackbar
           open={open}
@@ -82,7 +81,7 @@ setLoading(true)
           <Typography
             variant="h5"
             color="blue-gray"
-            className="mb-4 ! md:text-xl text-neutralGrey lg:!text-2xl"
+            className="mb-4 md:text-xl text-neutralGrey lg:text-2xl"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="200"
@@ -92,7 +91,7 @@ setLoading(true)
           <Typography
             variant="h1"
             color="blue-gray"
-            className="mb-4 !text-3xl text-greenPrimary lg:!text-5xl"
+            className="mb-4 text-3xl text-greenPrimary lg:text-5xl"
             data-aos="fade-up"
             data-aos-duration="1000"
             data-aos-delay="400"
@@ -152,7 +151,7 @@ setLoading(true)
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-delay="600"
-              className="flex justify-center"
+              className="flex justify-center w-full max-w-md"
               ref={form}
               onSubmit={sendEmail}
             >
@@ -160,7 +159,7 @@ setLoading(true)
                 <p className="mb-3 text-center max-w-96 min-w-80 text-lg font-semibold text-neutralDGrey">
                   Write me a message
                 </p>
-                <div className="flex flex-col gap-4 sm:max-w-sm">
+                <div className="flex flex-col gap-4 w-full">
                   <div>
                     <Input
                       color="gray"
@@ -173,7 +172,7 @@ setLoading(true)
                       name="user_name"
                       className="focus:border-t-gray-900 border-1 tracking-wider"
                       containerProps={{
-                        className: "min-w-full",
+                        className: "!min-w-full",
                       }}
                     />
                   </div>
@@ -211,10 +210,14 @@ setLoading(true)
                   </div>
                   <button
                     type="submit"
-                    className="px-3 flex hover:cursor-pointer md:w-6/12 justify-center items-center py-3 md:text-sm text-sm bg-greenPrimary hover:bg-green-400 border transition duration-150 text-white rounded-lg"
+                    className="px-3 flex hover:cursor-pointer w-full justify-center items-center py-3 md:text-sm text-sm bg-greenPrimary hover:bg-green-400 border transition duration-150 text-white rounded-lg"
                   >
-                    {loading? "Sending" : "Send Message"}
-                    {loading ? <Spinner className="h-4 w-4 ml-4" color="white" /> :<FiSend className="ml-4" />}
+                    {loading ? "Sending" : "Send Message"}
+                    {loading ? (
+                      <Spinner className="h-4 w-4 ml-4" color="white" />
+                    ) : (
+                      <FiSend className="ml-4" />
+                    )}
                   </button>
                 </div>
               </div>

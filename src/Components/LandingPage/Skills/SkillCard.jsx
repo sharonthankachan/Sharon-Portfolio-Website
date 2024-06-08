@@ -1,9 +1,10 @@
 import React from "react";
 import { BiSolidBadgeCheck } from "react-icons/bi";
 
-const SkillCard = ({ domain, contents }) => {
+const SkillCard = ({ domain, contents, ...rest }) => {
   return (
-    <div className=" rounded-3xl border border-1 border-gray-500 py-7 md:py-12 sm:mx-3">
+    <div >
+    <div className=" rounded-3xl border border-1 border-gray-500 py-7 md:py-12 sm:mx-3" >
       <h1 className="text-center text-2xl font-bold text-neutralDGrey">{domain}</h1>
       <div className="flex justify-center mt-5">
         <ul className="mt-6 grid grid-cols-2 lg:gap-x-24 gap-x-8 gap-y-4">
@@ -18,6 +19,7 @@ const SkillCard = ({ domain, contents }) => {
           ))}
         </ul>
       </div>
+    </div>
     </div>
   );
 };
