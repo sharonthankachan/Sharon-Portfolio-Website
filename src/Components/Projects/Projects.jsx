@@ -8,6 +8,7 @@ import portfolio from "../../assets/portfolio2.png";
 const Projects = ({id}) => {
   return (
     <section className="pt-1" id={id}>
+      <div className="mx-auto max-w-[1900px]">
       <div className="lg:mx-20 md:mx-12 mx-6">
         <div className="md:mt-32 mt-24">
           <h1
@@ -68,6 +69,7 @@ const Projects = ({id}) => {
             />
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

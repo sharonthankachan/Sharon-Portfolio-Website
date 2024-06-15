@@ -36,8 +36,8 @@ function NavBar() {
   }, []);
 
   return (
-    <header className="fixed w-full top-0 z-50">
-      <nav className={`bg-white ${scrolling ? "md:bg-white" : "md:bg-transparent"} lg:h-20 h-12 sm:h-16  py-2 md:px-8 px-4 flex justify-between items-center`}>
+    <header className={`fixed w-full top-0 z-50 bg-white ${scrolling ? "md:bg-white" : "md:bg-transparent"}`}>
+      <nav className={` mx-auto max-w-[1900px] lg:h-20 h-12 sm:h-16 py-2 md:px-8 px-4 flex justify-between items-center`}>
         <Link className="md:text-2xl text-lg font-bold tracking-widest text-neutralDGrey cursor-pointer" to="hero" smooth={true} duration={800} spy={true}>
           sharon<span className="text-greenPrimary">_</span>
         </Link>

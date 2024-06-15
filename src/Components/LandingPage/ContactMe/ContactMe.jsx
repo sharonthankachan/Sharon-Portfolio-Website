@@ -151,7 +151,7 @@ const ContactMe = ({ id }) => {
               data-aos="fade-left"
               data-aos-duration="1000"
               data-aos-delay="600"
-              className="flex justify-center w-full max-w-md"
+              className="flex justify-center"
               ref={form}
               onSubmit={sendEmail}
             >

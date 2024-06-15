@@ -11,6 +11,7 @@ import AboutCard from "./AboutCard";
 const AboutMe = ({id}) => {
   return (
     <section className="pt-1" id={id}>
+      <div className=" mx-auto max-w-[1900px]" >
       <div
         className="mt-24"
         data-aos="fade-in"
@@ -97,6 +98,7 @@ const AboutMe = ({id}) => {
             />
           </div> */}
         </div>
+      </div>
       </div>
     </section>
   );

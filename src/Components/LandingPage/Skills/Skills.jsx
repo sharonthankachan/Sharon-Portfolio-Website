@@ -21,7 +21,8 @@ const backEnd = [
 
 const Skills = ({ id }) => {
   return (
-    <section className="overflow-hidden" id={id}>
+    <section className="overflow-hidden " id={id}>
+      <div className="mx-auto max-w-[1900px]">
       <div className="">
         <div className="">
           <h1
@@ -58,6 +59,7 @@ const Skills = ({ id }) => {
         >
           <SkillCard domain={"Back End"} contents={backEnd} />
         </div>
+      </div>
       </div>
     </section>
   );

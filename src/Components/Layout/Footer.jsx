@@ -12,6 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full px-10 pt-24 bg-neutralSilver">
+      <div className=" mx-auto max-w-[1800px]">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-neutralSilver text-center md:justify-between">
         <Link
           className="md:text-2xl text-lg font-bold tracking-widest text-neutralDGrey cursor-pointer"
@@ -47,6 +48,7 @@ const Footer = () => {
       <Typography color="blue-gray" className="text-center font-normal pb-7">
         &copy; 2024 Sharon Thankachan
       </Typography>
+      </div>
     </footer>
   );
 };

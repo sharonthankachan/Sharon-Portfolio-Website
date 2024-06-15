@@ -11,6 +11,13 @@
     animation: profiie_animate 8s ease-in-out infinite 1s;
 }
 
+@media only screen and (min-width: 1600px) {
+    .home_img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 @keyframes profiie_animate {
     0%{
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
