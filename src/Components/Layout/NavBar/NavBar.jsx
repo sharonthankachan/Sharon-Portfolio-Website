@@ -38,9 +38,7 @@ function NavBar() {
   return (
     <header
       className={`fixed w-full top-0 z-50 bg-white transition-all duration-300 ${
-        scrolling
-          ? "md:bg-white md:h-16 h-10 border-b border-gray-300"
-          : "md:bg-transparent md:h-20 h-12"
+        scrolling ? "md:bg-white md:h-16 h-10 border-b border-gray-300" : "md:bg-transparent md:h-20 h-12"
       }`}
     >
       <nav
@@ -95,7 +93,7 @@ function NavBar() {
         </div>
       </nav>
       <div
-        className={`md:hidden fixed top-0 mt-12 pb-5 left-0 w-full bg-white z-50 transition-all duration-500 ${
+        className={`md:hidden fixed top-0 mt-10 pb-5 left-0 w-full bg-white z-50 transition-all duration-500 ${
           openNav ? "opacity-100" : "opacity-0 invisible"
         }`}
       >
