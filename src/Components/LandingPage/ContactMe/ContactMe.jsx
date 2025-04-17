@@ -78,7 +78,7 @@ const ContactMe = ({ id }) => {
           </Alert>
         </Snackbar>
         <div className="container text-center">
-          <Typography
+          {/* <Typography
             variant="h5"
             color="blue-gray"
             className="mb-4 md:text-xl text-neutralGrey lg:text-2xl"
@@ -97,7 +97,24 @@ const ContactMe = ({ id }) => {
             data-aos-delay="400"
           >
             Contact Me
-          </Typography>
+          </Typography> */}
+          <div className="">
+          <h1
+            className="text-neutralGrey md:text-xl mt-12 font-bold text-center"
+            data-aos="fade-right"
+            data-aos-duration="900"
+          >
+           Get In Touch
+          </h1>
+          <h1
+            className=" mt-8 md:text-5xl text-greenPrimary text-3xl font-bold text-center"
+            data-aos="fade-right"
+            data-aos-duration="900"
+            data-aos-delay="400"
+          >
+            Contact Me
+          </h1>
+        </div>
           <div className="mt-20 gap-y-6 md:flex justify-center lg:gap-24 md:gap-12">
             <div className="flex justify-center mb-8">
               <div className="space-y-3 flex flex-col">

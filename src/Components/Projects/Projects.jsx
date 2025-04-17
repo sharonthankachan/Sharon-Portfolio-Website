@@ -1,14 +1,14 @@
 import React from "react";
 import ProjectCard from "../Projects/ProjectCard";
 import cookify from "../../assets/cookify.png";
-import ai_image_generator from "../../assets/ai_image_generator.png";
+import music_producer from "../../assets/music_producer.png";
 import netflix_clone from "../../assets/netflix-clone.png";
 import portfolio from "../../assets/portfolio2.png";
 
 const Projects = ({id}) => {
   return (
     <section className="pt-1" id={id}>
-      <div className="mx-auto max-w-[1900px]">
+      <div className="mx-auto max-w-[1650px]">
       <div className="lg:mx-20 md:mx-12 mx-6">
         <div className="md:mt-32 mt-24">
           <h1
@@ -46,6 +46,19 @@ const Projects = ({id}) => {
               gitHubLink="https://github.com/sharonthankachan/Sharon-Portfolio-Website"
             />
           </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="1000"
+            data-aos-duration="1000"
+          >
+            <ProjectCard
+              title="Music Producer Website"
+              description="Developed a music producer website template with advanced styling and other attractive effects only by using Tailwind CSS."
+              image={music_producer}
+              liveLink="https://sharon-music-producer.vercel.app/"
+              gitHubLink="https://github.com/sharonthankachan/Music-Producer-Website"
+            />
+          </div>
           <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
             <ProjectCard
               title="Netflix Clone"
@@ -55,19 +68,7 @@ const Projects = ({id}) => {
               gitHubLink="https://github.com/sharonthankachan/Netflix-Clone"
             />
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-delay="1000"
-            data-aos-duration="1000"
-          >
-            <ProjectCard
-              title="AI Image Generator"
-              description="Developed an AI Image Generator web application enabling text-to-image conversion using React JS and the OpenAI API."
-              image={ai_image_generator}
-              liveLink="https://ai-image-generator-sharon.netlify.app/"
-              gitHubLink="https://github.com/sharonthankachan/AI_Image_Generator"
-            />
-          </div>
+
         </div>
       </div>
       </div>
